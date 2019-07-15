@@ -1,0 +1,22 @@
+'''Given an input string Count all lower case, upper case, 
+digits, and special symbols'''
+
+def digcharsym(words):
+  word = words.split()
+  charcount= 0
+  digitscount = 0
+  symbolscount = 0
+  
+  for char in words:
+    if char.islower() or char.isupper():
+      charcount += 1
+    if char.isnumeric():
+      digitscount =+1
+    else:
+      symbolscount=+1
+    
+
+  print("Chars = ", charcount, "Digits = ", digitscount, "Symbol = ", symbolscount)
+words = "G1!e2@n3#s4$i5%s6^" 
+print("Print total count of chars, digits and symbols")
+print(digcharsym(words))
